@@ -1,0 +1,41 @@
+<main id="margin">
+<aside id="two">
+<h2>Eat Me Daddy!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      <p>
+              {{this.id}}. {{this.burger_name}}
+      {{> burgers/burger-block devoured=true}}
+      </p>
+    {{/unless}}
+  {{/each}}
+</ul>
+</aside>
+<center>
+<h2>Add a burger</h2>
+<form class="create-form">
+ <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="burger_name">
+    <button type="submit">Add Burger</button>
+  </div>
+  </form>
+  </center>
+
+<aside id="three">
+<h2>Burgers that are pleased!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+     <p>
+              {{this.id}}. {{this.burger_name}}
+      {{> burgers/burger-block devoured=false}}
+      </p>
+    {{/if}}
+  {{/each}}
+</ul>
+</aside>
+</main>

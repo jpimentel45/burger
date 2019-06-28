@@ -1,0 +1,49 @@
+html {
+  background-image: url(../img/goodBurger.gif);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}
+header {
+  text-align: center;
+}
+main {
+  flex: 1;
+  display: flex;
+  place-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+center{
+  margin: 0 10px;
+}
+aside{
+  padding: 10px;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 768px) {
+ main{
+
+  flex-direction: column;
+  order:1
+ }
+ #two{
+  order: 2;
+}
+#three{
+  order: 3;
+}
+#margin{
+  margin: auto;
+  width: 50%;
+}
+}
