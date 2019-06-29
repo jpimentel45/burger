@@ -26,6 +26,7 @@ center {
 
 aside {
   padding: 10px;
+  flex: 1
 }
 
 li {
