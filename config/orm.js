@@ -5,7 +5,7 @@
 
 var connection = require("../config/connection.js");
 
-//loop question mark array will be converted to string 
+//loop question mark array will be converted to string
 function printQuestionMarks(num) {
   var arr = [];
 

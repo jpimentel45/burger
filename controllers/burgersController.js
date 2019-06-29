@@ -5,27 +5,26 @@ var router = express.Router();
 // Import burger functions
 var burger = require("../models/burger.js");
 
-
 router.get("/", function(req, res) {
   //using imported functions
   burger.all(function(data) {
     var hbsObject = {
       burgers: data
     };
-    
+
     res.render("index", hbsObject);
   });
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create([
-    "burger_name", "devoured"
-  ], [
-    req.body.burger_name, req.body.devoured
-  ], function(result) {
-    // JSON of created 
-    res.json({ id: result.insertId });
-  });
+  burger.create(
+    ["burger_name", "devoured"],
+    [req.body.burger_name, req.body.devoured],
+    function(result) {
+      // JSON of created
+      res.json({ id: result.insertId });
+    }
+  );
 });
 
 router.put("/api/burgers/:id", function(req, res) {
@@ -33,16 +32,20 @@ router.put("/api/burgers/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  burger.update({
-    devoured: req.body.devoured
-  }, condition, function(result) {
-    if (result.changedRows == 0) {
-  //handling error unexising 
-      return res.status(404).end();
-    } else {
-      res.status(200).end();
+  burger.update(
+    {
+      devoured: req.body.devoured
+    },
+    condition,
+    function(result) {
+      if (result.changedRows == 0) {
+        //handling error unexising
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
     }
-  });
+  );
 });
 
 router.delete("/api/burgers/:id", function(req, res) {
