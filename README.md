@@ -10,3 +10,6 @@ Adding Burger :
 
 Devour Burger :
 ![main route Screenshot](https://github.com/jpimentel45/burger/blob/master/public/assets/img/Screenshot3.png "Logo Title Text 1")
+
+mysqldump -h localhost -u root -pnauj1994 burgers_db > backup.sql
+mysql -h k2pdcy98kpcsweia.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306 -u ksuvlt2npin3qqe8 -r81xjjt9ohez5ru7 m76su6jje1scogxy < backup.sql
