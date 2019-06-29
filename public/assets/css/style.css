@@ -1,14 +1,17 @@
 html {
   background-image: url(../img/goodBurger.gif);
+  background-color: black;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color:white;
+  color: white;
 }
+
 header {
   text-align: center;
 }
+
 main {
   flex: 1;
   display: flex;
@@ -16,10 +19,12 @@ main {
   text-align: center;
   text-transform: uppercase;
 }
-center{
+
+center {
   margin: 0 10px;
 }
-aside{
+
+aside {
   padding: 10px;
 }
 
@@ -31,19 +36,18 @@ li {
 }
 
 @media only screen and (max-width: 768px) {
- main{
-
-  flex-direction: column;
-  order:1
- }
- #two{
-  order: 2;
-}
-#three{
-  order: 3;
-}
-#margin{
-  margin: auto;
-  width: 50%;
-}
+  main {
+    flex-direction: column;
+    order: 1
+  }
+  #two {
+    order: 2;
+  }
+  #three {
+    order: 3;
+  }
+  #margin {
+    margin: auto;
+    width: 50%;
+  }
 }
